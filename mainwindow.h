@@ -4,15 +4,19 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QLayout>
-#include <QScrollArea>
+#include <QColorDialog>
 #include <QDrag>
+#include <QRadioButton>
+#include <QString>
 
 
 class QPushButton;
 class QLayout;
-class QScrollArea;
 class QDrag;
 class QWidget;
+class QColorDialog;
+class QRadioButton;
+class QString;
 
 
 class MainWindow : public QMainWindow
@@ -21,40 +25,22 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+
     ~MainWindow();
 
 private:
 
 
+QPushButton *OKButton;
+QRadioButton *choiceCrusor;
+QRadioButton *choiceHighLighting;
+QHBoxLayout *BottonLayoutForButtons;
 
-QPushButton *settingsButoon;
-QPushButton *ButtonInside1;
-QPushButton *ButtonInside2;
-QPushButton *ButtonInside3;
-QPushButton *ButtonInside4;
-QPushButton *ButtonInside5;
-QPushButton *ButtonInside6;
-QPushButton *ButtonInside7;
-QPushButton *ButtonInside8;
-QPushButton *ButtonInside9;
-QPushButton *ButtonInside10;
-QPushButton *ButtonInside11;
-QPushButton *ButtonInside12;
-QPushButton *ButtonInside13;
-QPushButton *ButtonInside14;
-QPushButton *ButtonInside15;
-QPushButton *ButtonInside16;
-QPushButton *ButtonInside17;
-QPushButton *ButtonInside18;
-QPushButton *ButtonInside19;
-QPushButton *ButtonInside20;
-QPushButton *ButtonInside21;
+
+
 
 
 QVBoxLayout *MainLayout;
-QScrollArea *ScrollAreaOfApss;
-QWidget *WidgetForIncludeTheGames;
-QHBoxLayout *MainLayoutIncludeTheGames;
 
 };
 #endif // MAINWINDOW_H
