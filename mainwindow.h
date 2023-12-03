@@ -3,19 +3,15 @@
 
 #include <QMainWindow>
 #include <QPushButton>
-#include <QLayout>
 #include <QColorDialog>
-#include <QDrag>
-#include <QRadioButton>
 #include <QString>
+#include <QCheckBox>
 
 
 class QPushButton;
-class QLayout;
-class QDrag;
 class QWidget;
 class QColorDialog;
-class QRadioButton;
+class QCheckBox;
 class QString;
 
 
@@ -30,17 +26,14 @@ public:
 
 private:
 
-
+QColorDialog *selectColor;
 QPushButton *OKButton;
-QRadioButton *choiceCrusor;
-QRadioButton *choiceHighLighting;
-QHBoxLayout *BottonLayoutForButtons;
+QCheckBox *selectCrusor;
+QCheckBox *selectHighLighting;
 
 
 
 
-
-QVBoxLayout *MainLayout;
 
 };
 #endif // MAINWINDOW_H
