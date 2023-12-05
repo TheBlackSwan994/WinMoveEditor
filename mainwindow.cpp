@@ -15,11 +15,13 @@ QString QTemp = selectColor->selectedColor().name();
 
 
 
-
+//The next line change values what changes look Highlighting
 WinHighlightingOptionsWithoutParametrs = "Windows Registry Editor Version 5.00\n\n"
                                          "[HKEY_CURRENT_USER\\Control Panel\\Colors]\n\"Hilight\"=\"188 188 188\"\n\n"
                                          "[HKEY_CURRENT_USER\\Control Panel\\Colors]\n\"HotTrackingColor\"=\"117 117 117\"";
-path = "testFile.txt";
+
+//The next creates .reg-file what changes look Highlighting
+path = "YoureHiglightingColor.reg";
 
 QFile fmove(path);
 if (fmove.open(QIODevice::WriteOnly)){
