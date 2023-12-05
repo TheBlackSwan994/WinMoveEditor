@@ -7,21 +7,17 @@ MainWindow::MainWindow(QWidget *parent)
 selectColor = new QColorDialog(this);
 MainWindow::setCentralWidget(selectColor);
 selectColor->setWindowFlags(Qt::Widget);
-selectColor->setOptions(QColorDialog::DontUseNativeDialog |QColorDialog::NoButtons);
-OKButton = new QPushButton(this);
-OKButton->setText("OK");
-
-QString QTemp = selectColor->selectedColor().name();
 
 
+QString ColorToString;
+CurrentColor = selectColor->getRgba();
+ColorToString = CurrentColor.name(QColor::HexRgb);
 
 //The next line change values what changes look Highlighting
-WinHighlightingOptionsWithoutParametrs = "Windows Registry Editor Version 5.00\n\n"
-                                         "[HKEY_CURRENT_USER\\Control Panel\\Colors]\n\"Hilight\"=\"188 188 188\"\n\n"
-                                         "[HKEY_CURRENT_USER\\Control Panel\\Colors]\n\"HotTrackingColor\"=\"117 117 117\"";
+WinHighlightingOptionsWithoutParametrs = ColorToString;
 
 //The next creates .reg-file what changes look Highlighting
-path = "YoureHiglightingColor.reg";
+path = "testFile.txt";
 
 QFile fmove(path);
 if (fmove.open(QIODevice::WriteOnly)){
@@ -32,7 +28,6 @@ fmove.close();
 
 
 
-connect(OKButton, SIGNAL(clicked()), this, SLOT(QTemp>>fmove));
 
 
 

@@ -8,6 +8,7 @@
 #include <QCheckBox>
 #include <QFile>
 #include <QTextStream>
+#include <QColor>
 
 #include <fstream>
 #include <iostream>
@@ -19,7 +20,7 @@ class QCheckBox;
 class QString;
 class QFile;
 class QTextStream;
-
+class QColor;
 
 using namespace std;
 
@@ -36,7 +37,8 @@ public:
 private:
 
 
-string Temp;
+QColor CurrentColor;
+
 QString path;
 QString WinHighlightingOptionsWithoutParametrs;
 QColorDialog *selectColor;
