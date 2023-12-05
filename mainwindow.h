@@ -2,21 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QPushButton>
 #include <QColorDialog>
 #include <QString>
-#include <QCheckBox>
 #include <QFile>
 #include <QTextStream>
 #include <QColor>
 
-#include <fstream>
-#include <iostream>
 
-class QPushButton;
-class QWidget;
 class QColorDialog;
-class QCheckBox;
 class QString;
 class QFile;
 class QTextStream;
@@ -37,14 +30,10 @@ public:
 private:
 
 
-QColor CurrentColor;
-
 QString path;
 QString WinHighlightingOptionsWithoutParametrs;
-QColorDialog *selectColor;
-QPushButton *OKButton;
-QCheckBox *selectCrusor;
-QCheckBox *selectHighLighting;
+QColorDialog *WinMoveEditor;
+QColor CurrentColor;
 QString QTemp;
 
 

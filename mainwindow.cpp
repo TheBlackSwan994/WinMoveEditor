@@ -4,13 +4,10 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-selectColor = new QColorDialog(this);
-MainWindow::setCentralWidget(selectColor);
-selectColor->setWindowFlags(Qt::Widget);
 
 
 QString ColorToString;
-CurrentColor = selectColor->getRgba();
+CurrentColor = MainWindow::WinMoveEditor->getColor();
 ColorToString = CurrentColor.name(QColor::HexRgb);
 
 //The next line change values what changes look Highlighting
@@ -34,7 +31,6 @@ fmove.close();
 
 
 
-MainWindow::OKButton->move(405, 360);
 
 }
 
