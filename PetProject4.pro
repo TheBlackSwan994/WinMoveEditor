@@ -1,6 +1,6 @@
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 5): QT += widgets
 
 CONFIG += c++14
 
@@ -22,6 +22,11 @@ SOURCES += \
 
 HEADERS += \
     mainwindow.h
+
+FORMS += \
+
+win32:RC_FILE = WinMoveEditor.rc
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

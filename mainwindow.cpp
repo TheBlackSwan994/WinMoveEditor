@@ -17,11 +17,12 @@ auto rgbToString=[](const QColor &color, const QString &sep=","){
 
 
 //The next line change values what changes look Highlighting
-WinHighlightingOptionsWithoutParametrs = rgbToString(CurrentColor, ColorToString);
+WinHighlightingOptionsWithoutParametrs ="Windows Registry Editor Version 5.00\n\n"
+                                        "[HKEY_CURRENT_USER\\Control Panel\\Colors]\n\"Hilight\"=\"" +  rgbToString(CurrentColor, ColorToString) + "\"\n\n[HKEY_CURRENT_USER\\Control Panel\\Colors]\n\"HotTrackingColor\"=\"" +rgbToString(CurrentColor, ColorToString) + "\"";
 
 
 //The next creates .reg-file what changes look Highlighting
-path = "testFile.txt";
+path = "YoureHiglightingColor.reg";
 
 
 
